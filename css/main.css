@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background-image: url("../img/bg-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: hsl(229, 57%, 11%);
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 5rem;
+}
+.container .item {
+  background-color: hsl(228, 56%, 26%);
+}
+.container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  height: 20rem;
+  width: 30rem;
+  padding: 2.5rem;
+  border-radius: 1rem 40% 1rem 1rem;
+}
+.container .left .images img {
+  margin: 0 0.5rem;
+  padding: 1rem;
+  height: 5rem;
+  width: 5rem;
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 1rem;
+}
+.container .right {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1.5rem;
+  height: 15rem;
+  width: 60rem;
+  padding: 0 4em;
+  gap: 1rem;
+  color: hsl(243, 100%, 93%);
+}
+.container .right .storage {
+  font-size: 1.6rem;
+  color: hsl(243, 100%, 93%);
+}
+.container .right .storage span {
+  color: white;
+  font-weight: 700;
+}
+.container .right .line {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  border-radius: 2.5rem;
+  background: hsl(229, 57%, 11%);
+}
+.container .right .line .dot {
+  position: absolute;
+  right: 20%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  overflow: hidden;
+}
+.container .right .line::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 90%;
+  background: -webkit-gradient(linear, left top, right top, from(hsl(6, 100%, 80%)), to(hsl(335, 100%, 65%)));
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 2.5rem;
+}
+.container .right .hand {
+  position: absolute;
+  right: 7%;
+  top: -48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 3rem;
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+  border-radius: 2rem 2rem 0rem 2rem;
+  border: 2px solid black;
+}
+.container .right .hand .number {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.container .right .hand .gb {
+  position: relative;
+  margin-left: 5px;
+  font-size: 14px;
+  color: gray;
+  font-weight: 700;
+}
+.container .right .hand span {
+  font-size: 4rem;
+}
+.container .right .hand::before {
+  position: absolute;
+  content: "";
+  bottom: -33%;
+  right: 0%;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 50px solid white;
+}
+.container .space {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+.container .space span {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("../img/bg-mobile.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .left {
+    width: 35rem;
+  }
+  .container .right {
+    height: 20rem;
+    width: 35rem;
+  }
+  .container .right .hand {
+    right: 50%;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    top: 77%;
+    border-radius: 2rem;
+  }
+  .container .right .hand::before {
+    border: none;
+  }
+}/*# sourceMappingURL=main.css.map */

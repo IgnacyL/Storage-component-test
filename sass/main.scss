@@ -1,0 +1,179 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("../img/bg-desktop.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: hsl(229, 57%, 11%);
+  font-family: "Raleway", sans-serif;
+}
+.container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  gap: 5rem;
+  .item {
+    background-color: hsl(228, 56%, 26%);
+  }
+  .left {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+    height: 20rem;
+    width: 30rem;
+    padding: 2.5rem;
+    border-radius: 1rem 40% 1rem 1rem;
+
+    .images {
+      img {
+        margin: 0 0.5rem;
+        padding: 1rem;
+        height: 5rem;
+        width: 5rem;
+        background-color: hsl(229, 57%, 11%);
+        border-radius: 1rem;
+      }
+    }
+  }
+  .right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1.5rem;
+    height: 15rem;
+    width: 60rem;
+    padding: 0 4em;
+    gap: 1rem;
+    color: hsl(243, 100%, 93%);
+    .storage {
+      font-size: 1.6rem;
+      color: hsl(243, 100%, 93%);
+      span {
+        color: white;
+        font-weight: 700;
+      }
+    }
+    .line {
+      position: relative;
+      height: 20px;
+      width: 100%;
+      border-radius: 2.5rem;
+      background: hsl(229, 57%, 11%);
+
+      .dot {
+        position: absolute;
+        right: 20%;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: white;
+        overflow: hidden;
+      }
+    }
+    .line::before {
+      position: absolute;
+      content: "";
+      width: 80%;
+      height: 90%;
+      background: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%),
+        hsl(335, 100%, 65%)
+      );
+      border-radius: 2.5rem;
+    }
+    .hand {
+      position: absolute;
+      right: 7%;
+      top: -48%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 3rem;
+      background-color: white;
+      color: black;
+      font-size: 2rem;
+      border-radius: 2rem 2rem 0rem 2rem;
+      border: 2px solid black;
+      .number {
+        font-size: 4rem;
+        font-weight: 700;
+      }
+      .gb {
+        position: relative;
+        margin-left: 5px;
+        font-size: 14px;
+        color: gray;
+        font-weight: 700;
+      }
+      span {
+        font-size: 4rem;
+      }
+    }
+    .hand::before {
+      position: absolute;
+      content: "";
+      bottom: -33%;
+      right: 0%;
+      width: 0;
+      height: 0;
+      border-left: 40px solid transparent;
+      border-right: 0px solid transparent;
+      border-top: 50px solid white;
+    }
+  }
+  .space {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.6rem;
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url("../img/bg-mobile.png");
+    background-position: center;
+    background-size: cover;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+
+    .left {
+      width: 35rem;
+    }
+    .right {
+      height: 20rem;
+      width: 35rem;
+      .hand {
+        right: 50%;
+        transform: translateX(50%);
+        top: 77%;
+        border-radius: 2rem;
+      }
+      .hand::before {
+        border: none;
+      }
+    }
+  }
+}
